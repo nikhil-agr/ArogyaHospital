@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arogya Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-banner">
+        <div class="container">
+            <div class="small-bold-text banner-text">One Stop Solution for all your Health Problems</div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container main-nav flex">
+            <a href="#" class="company-logo">
+                <div class="company-logo flex">
+                    <img src="./asset/logo.jpeg" alt="company logo">
+                    <p style="margin-left: 15px; font-size: 25px;">Arogya</p>
+                </div>
+            </a>
+            <div class="nav-links">
+                <ul class="flex" type="none">
+                    <li><a href="index.html" class="hover-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#dept" class="hover-link">Department<i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" type="none">
+                            <li><a href="/Other Pages/Card_Dep.html" class="hover-link">Cardiology</a></li>
+                            <li><a href="#" class="hover-link">Orthopaedic</a></li>
+                            <li><a href="#" class="hover-link">Anesthetic</a></li>
+                            <li><a href="#" class="hover-link">ENT</a></li>
+                            <li><a href="#" class="hover-link">Pyschology</a></li>
+                            <li><a href="#" class="hover-link">Neurology</a></li>
+                            <li><a href="#" class="hover-link">Gynecology</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="hover-link">Head Doctors<i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" type="none">
+                            <li><a href="/Other Pages/Card_Dep.html" class="hover-link">Dr A K Bardhan(Cardiology)</a>
+                            </li>
+                            <li><a href="#" class="hover-link">Dr. Ravi Goyal (Orthopaedic)</a></li>
+                            <li><a href="#" class="hover-link">Dr. Preeti Goyal (Anesthetic)</a></li>
+                            <li><a href="#" class="hover-link">Dr. Aakash Agarwal (ENT)</a></li>
+                            <li><a href="#" class="hover-link">Dr. Sneha (Pyschologist)</a></li>
+                            <li><a href="#" class="hover-link">Dr. Amit Garg (Neurology)</a></li>
+                            <li><a href="#" class="hover-link">Dr. Rahul Saxena (Gynecology)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#location" class="hover-link">Hospitals</a></li>
+                    <li><a href="/Other Pages/FAQ.html" class="hover-link">FAQ</a></li>
+                    <li><a href="/Other Pages/login.html" class="hover-link secondary-button">Login</a></li>
+                    <li><a href="Other Pages/appointment.html" class="hover-link primary-button">Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container header-section">
+            <div class="header-left">
+                <h1>Our Vision</h1>
+                <p>Our vision is to achieve excellence in Healthcare services by offering unique expertise, state of the
+                    art technology & patient care Metro Group of Hospitals is committed in providing world class health
+                    care at an affordable cost, irrespective of the education background, caste, creed or social status
+                    of the patient.</p><br>
+                <p>Our immediate agenda is to set up more such dedicated centers for providing wholesome treatment to
+                    the patients from all over the country and abroad. We are committed in continually serving the
+                    humanity at every needful hour with our state of the art facilities and world's best professionals.
+                    We are motivated by the immense faith that our patients have kept in us, we will stand by our
+                    principles and policies and will pursue the same with full dedication in future as well.</p>
+                <a href="/Other Pages/login.html" class="primary-button get-started-btn">Get Started</a>
+            </div>
+            <div class="header-right ">
+                <div class="slider flex">
+                    <button class="fa fa-arrow-left" onclick="goPrev()"></button>
+                    <div class="box flex">
+                        <img src="asset/building.jpeg" alt="building" class="slide">
+                        <img src="asset/1.jpeg" alt="Image 1" class="slide">
+                        <img src="asset/2.jpg" alt="Image 2" class="slide">
+                        <img src="asset/3.jpg" alt="Image 3" class="slide">
+                        <img src="asset/4.jpeg" alt="Image 4" class="slide">
+                    </div>
+                    <!-- Buttons for controlling the slider-->
+                    <button class="fa fa-arrow-right" onclick="goNext()"></button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="chat-bot">
+            <button class="open-button" onclick="openForm()">Let's Chat!</button>
+
+            <div class="chat-popup" id="myForm">
+                <form class="form-container">
+                    <h1>Chat</h1>
+
+                    <label for="msg"><b>Message</b></label>
+                    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <main>
+        <div id="dept">
+            <h2 class="flex">Explore our Centres of Clinical Excellence</h2>
+            <p class="flex">Learn about the world class health care we provide</p>
+            <div class="fields container">
+                <img src="/asset/speciality_ah_m.png" class="doctors" alt="doctors">
+                <div class="info">
+                    <div class="dep-box"><a href="/Other Pages/Card_Dep.html" style="color: #183B56;"><img
+                                src="/asset/dep-logos/cardiology_icon.svg" alt="Caridology_icon">Caridology</a></div>
+                    <div class="dep-box"><img src="/asset/dep-logos/orthopaedic.svg" alt="orthopaedic_icon">Orthopaedic
+                    </div>
+                    <div class="dep-box"><img src="/asset/dep-logos/anesthesia.svg" alt="Anesthetic_icon">Anesthetic
+                    </div>
+                    <div class="dep-box"><img src="/asset/dep-logos/ent.svg"
+                            alt="ENT_icon">&nbsp;&nbsp;&nbsp;&nbsp;ENT&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="dep-box"><img src="/asset/dep-logos/psychiatry.svg" alt="Psychology_icon">Psychology
+                    </div>
+                    <div class="dep-box"><img src="/asset/dep-logos/neurology.svg" alt="Neurology_icon">Neurology</div>
+                    <div class="dep-box"><img src="/asset/dep-logos/gynecology.svg" alt="gynecology_icon">Gynecology
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="location">
+            <p style="margin-inline: 150px;">LOCATION</p>
+            <h2 style="margin-inline: 150px;">Hospitals In India</h2>
+            <p style="font-size: 1rem; margin-inline: 150px">Arogya Group constitutes the best hospital in India with
+                over 1,000 beds across 50 hospitals, 1000+ pharmacies, over 150 clinics, 500+ diagnostic centres and 50+
+                Telemedicine units.</p>
+            <div class="fields container">
+                <div class="info">
+                    <div class="location-box" id="amd" onclick="change()"><img src="/asset/city/ahmedabad_city.svg" alt="Ahmedabad">Ahmedabad</div>
+                    <div class="location-box" id="bang"><img src="/asset/city/bangalore_city.svg" alt="Bangalore">Bangalore</div>
+                    <div class="location-box" id="chen"><img src="/asset/city/chennai_city.svg" alt="Chennai">Chennai</div>
+                    <div class="location-box" id="mum"><img src="/asset/city/mumbai_city.svg" alt="Mumbai">Mumbai</div>
+                    <div class="location-box" id="del"><img src="/asset/city/delhi_city.svg" alt="Delhi">Delhi</div>
+                    <div class="location-box" id="hyd"><img src="/asset/city/hyderabad_city.svg" alt="Hyderabad">Hyderabad</div>
+                    <div class="location-box" id="ind"><img src="/asset/city/indore_city.svg" alt="Indore">Indore</div>
+                    <div class="location-box" id="kok"><img src="/asset/city/kolkata_city.svg" alt="Kolkata">Kolkata</div>
+                    <div class="location-box" id="luck"><img src="/asset/city/lucknow_city.svg" alt="Lucknow">Lucknow</div>
+                </div>
+                <div class="right-box">
+                    <img src="/asset/city/building-image/apollo-home-ahmedabad-1.jpg" alt="ahmedabad_city">
+                    <div class="building-info-box">
+                        <p style="color:black; font-weight: bold; margin-top: 10px;" id="city_name">Hospitals in
+                            Ahmedabad</p>
+                        <div class="right-box-div">
+                            <i class="fa-solid fa-location-dot" style="color: #007c9d;"></i>
+                            <p id="city-address" class="right-box-address">Plot No.1A, Bhat GIDC Estate Dist. Airport
+                                Gandhinagar Road, Dist. Gandhinagar, Ahmedabad - 382428 Gujarat</p>
+                        </div>
+                        <div class="right-box-div">
+                            <i class="fa-solid fa-phone" style="color: #007c9d;"></i>
+                            <p class="right-box-phone">8401801066</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <div class="container">
+                <h2>What Would You like to do Today?</h2>
+                <div class="addfeat flex">
+                    <div class="feat-box dep-box"><img src="/asset/Feat/bookappt_icon.svg" alt=""> <a
+                            href="/Other Pages/appointment.html">Book Appointment</a></div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/bookhelathcheck_icon.svg" alt=""><a
+                            href="/Other Pages/BMI_Calc.html">BMI Calculator</a></div>
+                    <div class="feat-box dep-box" onclick="openForm()"><img src="/asset/Feat/buymedicines_icon.svg" alt="">Consult Online
+                    </div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/consultonline_icon.svg" alt=""> <a
+                            href="https://www.apollopharmacy.in/" target="blank">Buy Medicine</a></div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/finddoctor_icon.svg" alt=""><a
+                            href="../index.html#dept">Find Doctors</a> </div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/findhsptl_icon.svg" alt=""><a
+                            href="../index.html#location">Find Hospital</a> </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/9dc7e35b48.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

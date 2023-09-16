@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: #5D9C59;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #F7F1E5;
+            width: 410px;
+            padding: 30px;
+            box-shadow: 0 0 8px #0000001a;
+        }
+
+        .close-btn {
+            float: right;
+            margin-top: -15px;
+            margin-right: -10px;
+            font-size: 22px;
+        }
+        .close-btn:hover {
+            color: #146C94;
+        }
+        .text {
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .form {
+            margin-top: -20px;
+        }
+
+        .data {
+            height: 45px;
+            width: 100%;
+            margin: 40px auto;
+        }
+
+        form .data label {
+            font-size: 18px;
+        }
+
+        form .data input {
+            height: 100%;
+            width: 100%;
+            padding-left: 10px;
+            font-size: 17px;
+            border: 1px solid silver;
+        }
+
+        form .data input:focus {
+            border-color: #3498DB;
+            border-bottom-width: 2px;
+        }
+
+        form a {
+            color: #A459D1;
+            transition: 0.2s ease;
+        }
+
+        form a:hover {
+            color: #19A7CE;
+        }
+
+        form .btn {
+           padding-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form .btn button {
+            height: 35px;
+            width: 80%;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            background-color: #FF6D60;
+            color: #000;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+        }
+
+        form .btn button:hover {
+            background-color: #FD5242;
+            font-size: 24px;
+            height: 40px;
+            width: 85%;
+        }
+
+        form .signup-link {
+            text-align: center;
+        }
+        span {
+            margin-top: -2px;
+            float: right;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="container">
+            <label for="" class="close-btn fas fa-times"></label>
+            <div class="text">Signup Form</div>
+            <form action="/index.html" name="signup-form" onsubmit="return validateForm()">
+                <div class="data">
+                    <label for="contact">Email or Phone</label>
+                    <input type="text" id="contact" required>
+                </div>
+                <div class="data" id="Pass">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="fpass" required><b><span class="formerror"> </span></b>
+                </div>
+                <div class="data" id="CPass">
+                    <label for="cpass">Confirm Password</label>
+                    <input type="password" id="cpass" name="fcpass" required><b><span class="formerror"> </span></b>
+                </div>
+                <div class="btn">
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function clearErrors() {
+        errors = document.getElementsByClassName('formerror');
+        for (let item of errors) {
+            item.innerHTML = "";
+        }
+    }
+
+    function seterror(id, error) {
+        //sets error inside tag of id
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+    }
+    function validateForm() {
+        var returnval = true;
+        clearErrors();
+
+        //perform validation and if validation fails, set the value of returnval to false
+        var password = document.forms['signup-form']['fpass'].value;
+        if (password.length < 8) {
+            seterror("Pass", "*Password must be of atleast 8 characters");
+            returnval = false;
+        }
+        //To check whether the password has a number, a uppercase letter, a lowercase letter, a special character
+        // var lowercase = /[a-z]/g;
+        // var uppercase = /[A-Z]/g;
+        // var number = /[0-9]/g;
+
+        // if (pass.match(lowercase) && pass.match(uppercase) && pass.match(number) && pass.length >= 8) {
+        // } else {
+        //     seterror("password", "*pls enter ur password with including lowercase, uppercase,number or atlest 8 ch long.");
+        //     returnval = false;
+        // }
+
+        var confirmPassword = document.forms['signup-form']['fcpass'].value;
+        if (confirmPassword != password) {
+            seterror("CPass", "*Password doesn't match.");
+            returnval = false;
+        }
+        if(returnval == true){
+            alert("Login Is Successfull."); 
+        }
+        return returnval;
+    }
+    </script>
+</body>
+
+</html>

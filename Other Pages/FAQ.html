@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../style.css">
+
+
+
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .faq-heading {
+            border-bottom: #777;
+            padding: 20px 60px;
+        }
+
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .hr-line {
+            width: 60%;
+            margin: auto;
+
+        }
+
+        /* Style the buttons that are used to open and close the faq-page body */
+        .faq-page {
+            /* background-color: #eee; */
+            color: #444;
+            cursor: pointer;
+            padding: 30px 20px;
+            width: 60%;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin: auto;
+
+        }
+
+        .faq-body {
+            margin: auto;
+            /* text-align: center; */
+            width: 50%;
+            padding: auto;
+
+        }
+
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .faq-page:hover {
+            background-color: #F9F9F9;
+        }
+
+        /* Style the faq-page panel. Note: hidden by default */
+        .faq-body {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        .faq-page:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="top-sticky-bar sticky">
+        <div class="top-banner">
+            <div class="container">
+                <div class="small-bold-text banner-text">Departments</div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="container main-nav flex">
+                <a href="#" class="company-logo">
+                    <div class="company-logo flex">
+                        <img src="../asset/logo.jpeg" alt="company logo">
+                        <p style="margin-left: 15px; font-size: 25px;">Arogya</p>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <ul class="flex" type="none">
+                        <li><a href="../index.html" class="hover-link">Home</a></li>
+                        <li class="dropdown">
+                            <a href="/index.html#dept" class="hover-link">Department<i
+                                    class="fa-solid fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" type="none">
+                                <li><a href="/Other Pages/Card_Dep.html" class="hover-link">Cardiology</a></li>
+                                <li><a href="#" class="hover-link">Orthopaedic</a></li>
+                                <li><a href="#" class="hover-link">Anesthetic</a></li>
+                                <li><a href="#" class="hover-link">ENT</a></li>
+                                <li><a href="#" class="hover-link">Pyschology</a></li>
+                                <li><a href="#" class="hover-link">Neurology</a></li>
+                                <li><a href="#" class="hover-link">Gynecology</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="hover-link">Head Doctors<i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" type="none">
+                                <li><a href="/Other Pages/Card_Dep.html" class="hover-link">Dr A K
+                                        Bardhan(Cardiology)</a></li>
+                                <li><a href="#" class="hover-link">Dr. Ravi Goyal (Orthopaedic)</a></li>
+                                <li><a href="#" class="hover-link">Dr. Preeti Goyal (Anesthetic)</a></li>
+                                <li><a href="#" class="hover-link">Dr. Aakash Agarwal (ENT)</a></li>
+                                <li><a href="#" class="hover-link">Dr. Sneha (Pyschologist)</a></li>
+                                <li><a href="#" class="hover-link">Dr. Amit Garg (Neurology)</a></li>
+                                <li><a href="#" class="hover-link">Dr. Rahul Saxena (Gynecology)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#location" class="hover-link">Hospitals</a></li>
+                        <li><a href="/Other Pages/FAQ.html" class="hover-link">FAQ</a></li>
+                        <li><a href="/Other Pages/login.html" class="hover-link secondary-button">Login</a></li>
+                        <li><a href="Other Pages/appointment.html" class="hover-link primary-button">Appointment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </div>
+
+    <div class="content container">
+
+
+        <h1 class="faq-heading">FAQ'S</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+
+                <!-- faq question -->
+                <h3 class="faq-page">How do I make an appointment with a healthcare provider at your hospital?</h3>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        We offer multiple ways to schedule an appointment. You can either call our appointment line at [phone number] or use our convenient online appointment booking system on our website.
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+
+            <div class="faq-two">
+
+                <!-- faq question -->
+                <h3 class="faq-page">What insurance plans do you accept?</h3>
+
+                <!-- faq answer -->
+
+                <div class="faq-body">
+                    <p>
+                        We accept a wide range of insurance plans, including major private insurance providers, Medicare, and Medicaid. For specific details about accepted insurance plans, please contact our billing department or refer to the insurance information page on our website.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="hr-line">
+
+
+            <div class="faq-three">
+
+                <!-- faq question -->
+                <h3 class="faq-page">What are your visiting hours for patients?</h3>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Our hospital understands the importance of family and friends during a patient's recovery. We have flexible visiting hours from [start time] to [end time]. However, please note that there might be restrictions or guidelines in place for certain units or patients. We recommend contacting the specific department or reviewing our visitation policy on our website for the most up-to-date information.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="hr-line">
+
+
+            <div class="faq-four">
+
+                <!-- faq question -->
+                <h3 class="faq-page">How can I access my medical records?</h3>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        As a patient, you have the right to access your medical records. We provide a secure online portal where you can view and manage your medical records. You can also request a copy of your records through our Health Information Management department. For more information on accessing your medical records, please visit the "Patient Resources" section on our website.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="hr-line">
+
+
+            <div class="faq-five">
+
+                <!-- faq question -->
+                <h3 class="faq-page">What services and specialties does your hospital offer?</h3>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        Our hospital is equipped with a wide range of medical services and specialties to cater to diverse healthcare needs. Some of our key services include emergency care, surgery, radiology, pediatrics, cardiology, orthopedics, and more. For a comprehensive list of our services and specialties, please visit the "Services" section on our website.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="hr-line">
+
+
+            <div class="faq-six">
+
+                <!-- faq question -->
+                <h3 class="faq-page">How do I pay my hospital bills?</h3>
+
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>
+                        We offer multiple options for bill payment. You can conveniently pay your hospital bills online through our secure payment portal on our website. We also accept payments in person at our billing office or through mail. If you have any questions regarding your bill or need assistance with payment options, please contact our billing department, and they will be happy to help you.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <div id="chat-bot">
+        <button class="open-button" onclick="openForm()">Let's Chat!</button>
+
+        <div class="chat-popup" id="myForm">
+            <form class="form-container">
+                <h1>Chat</h1>
+
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="footer-box">
+            <div class="container">
+                <h2>What Would You like to do Today?</h2>
+                <div class="addfeat flex">
+                    <div class="feat-box dep-box"><img src="/asset/Feat/bookappt_icon.svg" alt=""> <a
+                            href="/Other Pages/appointment.html">Book Appointment</a></div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/bookhelathcheck_icon.svg" alt=""><a
+                            href="/Other Pages/BMI_Calc.html">BMI Calculator</a></div>
+                    <div class="feat-box dep-box" onclick="openForm()"><img src="/asset/Feat/buymedicines_icon.svg"
+                            alt="">Consult Online
+                    </div>
+
+                    <div class="feat-box dep-box"><img src="/asset/Feat/consultonline_icon.svg" alt=""> <a
+                            href="https://www.apollopharmacy.in/" target="blank">Buy Medicine</a></div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/finddoctor_icon.svg" alt=""><a
+                            href="../index.html#dept">Find Doctors</a> </div>
+                    <div class="feat-box dep-box"><img src="/asset/Feat/findhsptl_icon.svg" alt=""><a
+                            href="../index.html#location">Find Hospital</a> </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://kit.fontawesome.com/9dc7e35b48.js" crossorigin="anonymous"></script>
+
+    <script>
+        window.onscroll = function () { myFunction() }
+        var navbar = document.getElementsByClassName('top-sticky-bar')[0];
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+
+
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var body = this.nextElementSibling;
+                if (body.style.display === "block") {
+                    body.style.display = "none";
+                } else {
+                    body.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

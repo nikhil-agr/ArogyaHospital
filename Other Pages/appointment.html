@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to top, #146C94, #19A7CE, #AFD3E2);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        form {
+            width: 500px;
+            margin: 20px auto 0 auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        h1 {
+            color: #2D2727;
+            text-align: center;
+        }
+
+        .formdesign {
+            color: #2A2F4F;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .formdesign input,
+        select {
+            display: block;
+            width: 90%;
+            padding: 10px 18px;
+            border: 2px solid #6C9BCF;
+            /* margin: 14px auto; */
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .formdesign.success input {
+            border-color: #03C988;
+        }
+
+        .formdesign.error input {
+            border-color: #ED2B2A;
+        }
+
+        .formerror {
+            color: red;
+        }
+
+        .but {
+            color: white;
+            background-color: #2939c2;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            height: 50px;
+            font-size: 25px;
+            transition: 0.2s ease-in-out;
+        }
+
+        .but:hover {
+            border: 3px solid black;
+            background-color: #0215bd;
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Book An Appointment Now.</h1>
+    <form action="appoint_success.html" name="myForm" onsubmit="return validateForm()">
+        <div class="formdesign" id="name">
+            Name: <input type="text" name="fname" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="age">
+            Age: <input type="number" name="fage" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="gender">
+            Gender:
+            <select id="select" required>
+                <option value="NULL">--Select Gender--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="formdesign" id="phone">
+            Phone Number: <input type="phone" name="fphone" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="email">
+            E-mail: <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="address">
+            Address: <textarea name="address" id="faddress" cols="29" rows="5" required></textarea>
+        </div>
+
+        <div class="formdesign" id="date">
+            Appointment Date: <input type="date" name="fdate" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="dep">
+            Department:
+            <select id="select" required>
+                <option value="NULL">--Select Department--</option>
+                <option value="Gyneology">Gynecology</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Orthopadic">Orthopadic</option>
+                <option value="Emergency">ENT</option>
+                <option value="pyschology">Pyschology</option>
+                <option value="neurology">Neurology</option>
+                <option value="Cancer">Cancer</option>
+            </select>
+        </div>
+
+        <input type="submit" class="but" value="Submit">
+    </form>
+</body>
+<script>
+    function clearErrors() {
+        errors = document.getElementsByClassName('formerror');
+        for (let item of errors) {
+            item.innerHTML = "";
+        }
+    }
+
+
+    function seterror(id, error) {
+        //sets error inside tag of id
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+    }
+    function validateForm() {
+        var returnval = true;
+        clearErrors();
+
+        //perform validation and if validation fails, set the value of returnval to false
+
+        var name = document.forms['myForm']['fname'].value;
+        if (name.length < 5) {
+            seterror("name", "*Length of name is too short");
+            returnval = false;
+        }
+
+        var age = document.forms['myForm']['fage'].value;
+        if (age < 5) {
+            seterror("age", "*You are young to be here.");
+            returnval = false;
+        }
+
+        var phone = document.forms['myForm']['fphone'].value;
+        if (phone.length != 10) {
+            seterror("phone", "*Phone number should be of 10 digits.");
+            returnval = false;
+        }
+
+        var userInputDate = document.forms['myForm']['fdate'].value;
+        const userDate = new Date(userInputDate);
+        const todayDate = new Date();
+        if (userDate.getTime() <= todayDate.getTime()) {
+            seterror("date", "*Date is Invalid");
+            returnval = false;
+        }
+
+
+        return returnval;
+    }
+</script>
+
+</html>

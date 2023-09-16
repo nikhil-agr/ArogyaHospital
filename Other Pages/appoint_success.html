@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Appointment Successfull
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #EE4E34;
+            max-width: 100vw;
+            text-align: center;
+        }
+
+        #content {
+            margin-top: 20vh;
+            margin-inline: auto;
+            font-family: cursive;
+            color: #2B2B2B;
+            background-color: #FCEDDA;
+            padding: 20px;
+            font-size: 20px;
+            height: auto;
+            width: 60vw;
+            border-radius: 15px;
+        }
+        #goBack {
+            margin: 7vh auto;
+            display: flex;
+            width: 250PX;
+            height: 80PX;
+            background-color: #19A7CE;
+            border-radius: 7px;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        #goBack a { 
+            color: #F8F6F4;
+            text-decoration: none;
+            transition: 0.2s ease-in;
+        }
+        #goBack a:hover {
+            font-size: 23px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Your appointment has been booked you can come at Your Selected Date </h1>
+        <h1 id="p1"></h1>
+    </div>
+    <div>
+        <div id="goBack">
+            <!-- <a href="../index.html">Click Here to go Back</a> -->
+            <a href="/">Click Here to go Back</a>
+        </div>
+    </div>
+    <script>
+        function pad(number) {
+            return ((number < 10) ? "0" : "") + number.toString();
+        }
+
+        function randomTime() {
+            var r = Math.floor(Math.random() * 1440);
+            var HH = pad(1 + (Math.floor(r / 60) % 12));
+            var MM = pad(r % 60);
+            var AMPM = (r >= 720) ? "PM" : "AM";
+
+            return HH + ":" + MM + " " + AMPM;
+        }
+
+        document.getElementById("p1").innerHTML = randomTime();
+    </script>
+</body>
+
+</html>
